@@ -22,7 +22,7 @@ public class StartUp {
 		System.out.println("Shall we get started?");
 		System.out.println("1) Yes");
 		int userReady = userInput.nextInt();
-		//Game();
+		Game.main(args);
 	}
 	
 	public static void tutorial(){

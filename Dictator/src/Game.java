@@ -155,10 +155,7 @@ public static void graphChecker(){
 	frameMaker();
 }
 public static void police(){
-	System.out.println("police");
-	Faction.get(0).setFactionValue(Faction.get(0).getFactionValue() + 20);
-	System.out.println(Faction.get(0).getFactionValue());
-	graphChecker();
+	Police.runner();
 }
 public static void oligarchy(){
 	System.out.println("oligarchy");
