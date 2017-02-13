@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Game extends Canvas{
 	static ArrayList<Factions> Faction = new ArrayList<Factions>();
 	private static final long	serialVersionUID	= 1L;
-	static int cash = 100000;
+	static int cash = 119;
 	
 	public static void main(String[] args) {
 		Faction.add(new Factions("Police", 119));
@@ -66,6 +66,7 @@ public void paint(Graphics graphics)
         graphics.fillRect(0, 0, 300, 50);
         
         graphics.setColor(Color.black);
+        graphics.fillRect(30, 100, 240, 20);
         graphics.fillRect(30, 150, 240, 40);
         graphics.fillRect(30, 220, 240, 40);
         graphics.fillRect(30, 290, 240, 40);
@@ -74,6 +75,7 @@ public void paint(Graphics graphics)
         graphics.fillRect(30, 500, 240, 40);
         
         graphics.setColor(Color.white);
+        graphics.fillRect(31, 101, 238, 18);
         graphics.fillRect(31, 151, 238, 38);
         graphics.fillRect(31, 221, 238, 38);
         graphics.fillRect(31, 291, 238, 38);
@@ -82,6 +84,7 @@ public void paint(Graphics graphics)
         graphics.fillRect(31, 501, 238, 38);
         
         graphics.setColor(Color.red);
+        graphics.fillRect(31, 101, cash, 18);
         graphics.fillRect(31, 151, Faction.get(0).getFactionValue(), 38);
         graphics.fillRect(31, 221, Faction.get(1).getFactionValue(), 38);
         graphics.fillRect(31, 291, Faction.get(2).getFactionValue(), 38);
@@ -93,8 +96,7 @@ public void paint(Graphics graphics)
         graphics.drawString("DICTATOR", 115, 30);
         
         graphics.setColor(Color.red);
-        graphics.drawString("CASH", 130, 70);
-        //graphics.drawInt(cash, 130, 80);
+        graphics.drawString("CASH", 130, 95);
         graphics.drawString("POLICE", 130, 145);
         graphics.drawString("OLIGARCHY", 117, 215);
         graphics.drawString("PEOPLE", 130, 285);
@@ -109,6 +111,7 @@ public static void graphChecker(){
 	}
 	else if (Faction.get(0).getFactionValue() < 0){
 		Faction.get(0).setFactionValue(0);
+		factionHatesYou();
 	}
 	else {
 	}
@@ -117,6 +120,7 @@ public static void graphChecker(){
 	}
 	else if (Faction.get(1).getFactionValue() < 0){
 		Faction.get(1).setFactionValue(0);
+		factionHatesYou();
 	}
 	else {
 	}
@@ -125,6 +129,7 @@ public static void graphChecker(){
 	}
 	else if (Faction.get(2).getFactionValue() < 0){
 		Faction.get(2).setFactionValue(0);
+		factionHatesYou();
 	}
 	else {
 	}
@@ -133,6 +138,7 @@ public static void graphChecker(){
 	}
 	else if (Faction.get(3).getFactionValue() < 0){
 		Faction.get(3).setFactionValue(0);
+		factionHatesYou();
 	}
 	else {
 	}
@@ -141,6 +147,7 @@ public static void graphChecker(){
 	}
 	else if (Faction.get(4).getFactionValue() < 0){
 		Faction.get(4).setFactionValue(0);
+		factionHatesYou();
 	}
 	else {
 	}
@@ -149,9 +156,17 @@ public static void graphChecker(){
 	}
 	else if (Faction.get(5).getFactionValue() < 0){
 		Faction.get(5).setFactionValue(0);
+		factionHatesYou();
 	}
 	else {
 	}
+	
+	if (cash < 0){
+		noMoney();
+	}
+	else{
+	}
+	
 	frameMaker();
 }
 public static void police(){
@@ -171,6 +186,13 @@ public static void army(){
 }
 public static void family(){
 	System.out.println("family");
+}
+
+public static void noMoney(){
+	System.out.println("No Money");
+}
+public static void factionHatesYou(){
+	System.out.println("REBELLION!");
 }
 
 }
