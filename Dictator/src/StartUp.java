@@ -15,10 +15,6 @@ public class StartUp {
 		}
 		else {
 		}
-		System.out.println("What should I call you?");
-		name = userInput.nextLine();
-		System.out.println();
-		System.out.println("Well hello there, " + name);
 		System.out.println("Shall we get started?");
 		System.out.println("1) Yes");
 		int userReady = userInput.nextInt();

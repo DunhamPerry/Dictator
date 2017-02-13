@@ -20,7 +20,7 @@ public class Game extends Canvas{
 	}
 	public static void runner(){
 		Scanner userInput = new Scanner(System.in);
-		System.out.println("Who would you like to consult with today, " + StartUp.name + "?");
+		System.out.println("Who would you like to consult with today, my Leader?");
 		System.out.println("1) Police");
 		System.out.println("2) Oligarchy");
 		System.out.println("3) People");
@@ -155,13 +155,13 @@ public static void graphChecker(){
 	frameMaker();
 }
 public static void police(){
-	Police.runner();
+	Decisions.police();
 }
 public static void oligarchy(){
-	System.out.println("oligarchy");
+	Decisions.oligarchy();
 }
 public static void people(){
-	System.out.println("people");
+	Decisions.people();
 }
 public static void opposition(){
 	System.out.println("opposition");
