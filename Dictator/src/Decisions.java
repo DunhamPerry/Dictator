@@ -18,6 +18,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 40);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
@@ -25,6 +26,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 40);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.police();
@@ -40,12 +42,14 @@ public class Decisions {
 				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 40);
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 60);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
 				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 40);
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 60);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.police();
@@ -60,11 +64,13 @@ public class Decisions {
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
 				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
 				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.police();
@@ -79,11 +85,13 @@ public class Decisions {
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
 				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() + 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 40);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
 				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() - 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 40);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.police();
@@ -101,6 +109,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 40);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
@@ -109,6 +118,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 40);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.police();
@@ -135,6 +145,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 40);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
@@ -143,6 +154,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 40);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.oligarchy();
@@ -160,6 +172,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
@@ -168,6 +181,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.oligarchy();
@@ -184,6 +198,7 @@ public class Decisions {
 				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 40);
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 40);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
@@ -191,6 +206,7 @@ public class Decisions {
 				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 40);
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 40);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.oligarchy();
@@ -206,12 +222,14 @@ public class Decisions {
 				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 60);
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 40);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() - 20);
 				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 60);
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 40);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.oligarchy();
@@ -230,6 +248,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 40);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
@@ -238,6 +257,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 40);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.oligarchy();
@@ -261,6 +281,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
@@ -269,6 +290,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.people();
@@ -285,6 +307,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() + 40);
@@ -292,6 +315,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.people();
@@ -309,6 +333,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 60);
@@ -317,6 +342,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.people();
@@ -333,6 +359,7 @@ public class Decisions {
 				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 20);
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
+				Game.cash = Game.cash - 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
@@ -340,6 +367,7 @@ public class Decisions {
 				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 20);
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.people();
@@ -357,6 +385,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash + 10;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 60);
@@ -365,6 +394,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash + 10;
 			}
 			else {
 				Decisions.people();
