@@ -125,8 +125,7 @@ public class Decisions {
 			}
 			break;
 		}
-			Game.frameMaker();
-
+		Game.graphChecker();
 	}
 	
 	public static void oligarchy(){
@@ -138,14 +137,13 @@ public class Decisions {
 			System.out.println("2) No");
 			userAnswer = userInput.nextInt();
 			if (userAnswer == 1){
-				//cost -50,000
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
 				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() + 20);
 				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 20);
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 40);
-				Game.cash = Game.cash - 10;
+				Game.cash = Game.cash - 15;
 			}
 			else if (userAnswer == 2){
 				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
@@ -154,7 +152,7 @@ public class Decisions {
 				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
 				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
 				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 40);
-				Game.cash = Game.cash + 10;
+				Game.cash = Game.cash + 15;
 			}
 			else {
 				Decisions.oligarchy();
@@ -264,7 +262,7 @@ public class Decisions {
 			}
 			break;
 		}
-			Game.frameMaker();
+		Game.graphChecker();
 	}
 	public static void people(){
 		Scanner userInput = new Scanner(System.in);
@@ -401,7 +399,277 @@ public class Decisions {
 			}
 			break;
 		}
-			Game.frameMaker();
+		Game.graphChecker();
+	}
+	
+	public static void opposition(){
+		Scanner userInput = new Scanner(System.in);
+		switch ((int)((Math.random()*5)+1)){
+		case 1:
+			System.out.println("The General Prosecutor hit the lawyer in a criminal case with a book in the courthouse. Imprision the Generale Prosecutor?");
+			System.out.println("1) Yes");
+			System.out.println("2) No");
+			userAnswer = userInput.nextInt();
+			if (userAnswer == 1){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 60);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 20);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
+				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash - 15;
+			}
+			else if (userAnswer == 2){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 60);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 20);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
+				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash + 15;
+			}
+			else {
+				Decisions.opposition();
+			}
+			break;
+		case 2:
+			System.out.println("");
+			System.out.println("1) Yes");
+			System.out.println("2) No");
+			userAnswer = userInput.nextInt();
+			if (userAnswer == 1){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() + 40);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 40);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
+				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash - 10;
+			}
+			else if (userAnswer == 2){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() - 40);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 40);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
+				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash + 10;
+			}
+			else {
+				Decisions.opposition();
+			}
+			break;
+		case 3:
+			System.out.println("Permit businessmen to buy one of the state-owned television stations?");
+			System.out.println("1) Yes");
+			System.out.println("2) No");
+			userAnswer = userInput.nextInt();
+			if (userAnswer == 1){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() + 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 40);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 40);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
+				Game.cash = Game.cash - 10;
+			}
+			else if (userAnswer == 2){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() - 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 40);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 40);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
+				Game.cash = Game.cash + 10;
+			}
+			else {
+				Decisions.opposition();
+			}
+			break;
+		case 4:
+			System.out.println("Order teachers to bow to oligarch's children?");
+			System.out.println("1) Yes");
+			System.out.println("2) No");
+			userAnswer = userInput.nextInt();
+			if (userAnswer == 1){
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() + 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 60);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 40);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
+				Game.cash = Game.cash - 10;
+			}
+			else if (userAnswer == 2){
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() - 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 60);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 40);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
+				Game.cash = Game.cash + 10;
+			}
+			else {
+				Decisions.opposition();
+			}
+			break;
+		case 5:
+			System.out.println("Raise pensions for the oligarchs?");
+			System.out.println("1) Yes");
+			System.out.println("2) No");
+			userAnswer = userInput.nextInt();
+			//cost 50,000
+			if (userAnswer == 1){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() + 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 40);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 40);
+				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash - 10;
+			}
+			else if (userAnswer == 2){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() - 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 40);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 40);
+				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash + 10;
+			}
+			else {
+				Decisions.opposition();
+			}
+			break;
+		}
+		Game.graphChecker();
+	}
+	
+	public static void army(){
+		Scanner userInput = new Scanner(System.in);
+		switch ((int)((Math.random()*5)+1)){
+		case 1:
+			System.out.println("Take control of your uncle's factories for the needs of the military?");
+			System.out.println("1) Yes");
+			System.out.println("2) No");
+			userAnswer = userInput.nextInt();
+			if (userAnswer == 1){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() - 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 40);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
+				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 60);
+				Game.cash = Game.cash - 10;
+			}
+			else if (userAnswer == 2){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() + 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 40);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
+				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 60);
+				Game.cash = Game.cash + 10;
+			}
+			else {
+				Decisions.army();
+			}
+			break;
+		case 2:
+			System.out.println("Permit oligarchs to transfer funds to the personal accounts of police?");
+			System.out.println("1) Yes");
+			System.out.println("2) No");
+			userAnswer = userInput.nextInt();
+			if (userAnswer == 1){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() + 40);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 40);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
+				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash - 10;
+			}
+			else if (userAnswer == 2){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() - 40);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 40);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
+				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash + 10;
+			}
+			else {
+				Decisions.army();
+			}
+			break;
+		case 3:
+			System.out.println("Permit businessmen to buy one of the state-owned television stations?");
+			System.out.println("1) Yes");
+			System.out.println("2) No");
+			userAnswer = userInput.nextInt();
+			if (userAnswer == 1){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() + 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 40);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 40);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
+				Game.cash = Game.cash - 10;
+			}
+			else if (userAnswer == 2){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() - 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 40);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 40);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
+				Game.cash = Game.cash + 10;
+			}
+			else {
+				Decisions.army();
+			}
+			break;
+		case 4:
+			System.out.println("Order teachers to bow to oligarch's children?");
+			System.out.println("1) Yes");
+			System.out.println("2) No");
+			userAnswer = userInput.nextInt();
+			if (userAnswer == 1){
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() + 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 60);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 40);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 20);
+				Game.cash = Game.cash - 10;
+			}
+			else if (userAnswer == 2){
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() - 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 60);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 40);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 20);
+				Game.cash = Game.cash + 10;
+			}
+			else {
+				Decisions.army();
+			}
+			break;
+		case 5:
+			System.out.println("Raise pensions for the oligarchs?");
+			System.out.println("1) Yes");
+			System.out.println("2) No");
+			userAnswer = userInput.nextInt();
+			//cost 50,000
+			if (userAnswer == 1){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() - 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() + 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() - 40);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() - 20);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() - 40);
+				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() - 20);
+				Game.cash = Game.cash - 10;
+			}
+			else if (userAnswer == 2){
+				Game.Faction.get(0).setFactionValue(Game.Faction.get(0).getFactionValue() + 20);
+				Game.Faction.get(1).setFactionValue(Game.Faction.get(1).getFactionValue() - 20);
+				Game.Faction.get(2).setFactionValue(Game.Faction.get(2).getFactionValue() + 40);
+				Game.Faction.get(3).setFactionValue(Game.Faction.get(3).getFactionValue() + 20);
+				Game.Faction.get(4).setFactionValue(Game.Faction.get(4).getFactionValue() + 40);
+				Game.Faction.get(5).setFactionValue(Game.Faction.get(5).getFactionValue() + 20);
+				Game.cash = Game.cash + 10;
+			}
+			else {
+				Decisions.army();
+			}
+			break;
+		}
+		Game.graphChecker();
 	}
 
 }

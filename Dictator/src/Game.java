@@ -30,22 +30,22 @@ public class Game extends Canvas{
 		int userAnswer = userInput.nextInt();
 		
 		if (userAnswer == 1){
-			police();
+			Decisions.police();
 		}
 		else if (userAnswer == 2){
-			oligarchy();
+			Decisions.oligarchy();
 		}
 		else if (userAnswer == 3){
-			people();
+			Decisions.people();
 		}
 		else if (userAnswer == 4){
-			opposition();
+			//Decisions.opposition();
 		}
 		else if (userAnswer == 5){
-			army();
+			//Decisions.army();
 		}
 		else if (userAnswer == 6){
-			family();
+			//Decisions.family();
 		}
 	}
 	public static void frameMaker(){
@@ -105,6 +105,12 @@ public void paint(Graphics graphics)
         graphics.drawString("FAMILY", 130, 495);
 	}
 public static void graphChecker(){
+	System.out.println("Police: " + Faction.get(0).getFactionValue());
+	System.out.println("Oligarchy: " + Faction.get(1).getFactionValue());
+	System.out.println("People: " + Faction.get(2).getFactionValue());
+	System.out.println("Opposition: " + Faction.get(3).getFactionValue());
+	System.out.println("Army: " + Faction.get(4).getFactionValue());
+	System.out.println("Family: " + Faction.get(5).getFactionValue());
 	
 	if (Faction.get(0).getFactionValue() > 238){
 		Faction.get(0).setFactionValue(238);
@@ -169,30 +175,18 @@ public static void graphChecker(){
 	
 	frameMaker();
 }
-public static void police(){
-	Decisions.police();
-}
-public static void oligarchy(){
-	Decisions.oligarchy();
-}
-public static void people(){
-	Decisions.people();
-}
-public static void opposition(){
-	System.out.println("opposition");
-}
-public static void army(){
-	System.out.println("army");
-}
-public static void family(){
-	System.out.println("family");
-}
 
 public static void noMoney(){
-	System.out.println("No Money");
+	System.out.println();
+	System.out.println("Your bank vault is empty");
+	System.out.println("You no longer have the funds to bribe the groups");
+	System.exit(0);
 }
 public static void factionHatesYou(){
+	System.out.println();
 	System.out.println("REBELLION!");
+	System.out.println("You have been overthrown in a deadly coup and your lifeless remains now hang outside your palace");
+	System.exit(0);
 }
 
 }
