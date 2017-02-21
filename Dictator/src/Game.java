@@ -7,6 +7,8 @@ public class Game extends Canvas{
 	static ArrayList<Factions> Faction = new ArrayList<Factions>();
 	private static final long	serialVersionUID	= 1L;
 	static int cash = 119;
+	static int checker = 0;
+	static int age = 35;
 	
 	public static void main(String[] args) {
 		Faction.add(new Factions("Police", 119));
@@ -39,13 +41,13 @@ public class Game extends Canvas{
 			Decisions.people();
 		}
 		else if (userAnswer == 4){
-			//Decisions.opposition();
+			Decisions.opposition();
 		}
 		else if (userAnswer == 5){
-			//Decisions.army();
+			Decisions.army();
 		}
 		else if (userAnswer == 6){
-			//Decisions.family();
+			Decisions.family();
 		}
 	}
 	public static void frameMaker(){
@@ -61,7 +63,8 @@ public class Game extends Canvas{
 	}
 	
 public void paint(Graphics graphics) 
-	{			  	        
+	{	
+		if (checker == 0){
         graphics.setColor(Color.red);
         graphics.fillRect(0, 0, 300, 50);
         
@@ -103,90 +106,150 @@ public void paint(Graphics graphics)
         graphics.drawString("OPPOSITION", 117, 355);
         graphics.drawString("ARMY", 131, 425);
         graphics.drawString("FAMILY", 130, 495);
+		}
+		else if (checker == 1){
+			graphics.setColor(Color.white);
+			graphics.fillRect(0,0,300,600);
+			
+			graphics.setColor(Color.red);
+			graphics.fillRect(50, 200, 200, 50);
+			
+			graphics.setColor(Color.white);
+			graphics.drawString("YOU RAN OUT OF MONEY!", 80, 230);
+		}
+		else if (checker == 2){
+			graphics.setColor(Color.white);
+			graphics.fillRect(0,0,300,600);
+			
+			graphics.setColor(Color.red);
+			graphics.fillRect(50, 200, 200, 50);
+			
+			graphics.setColor(Color.white);
+			graphics.drawString("REBELLION!", 125, 225);
+		}
 	}
 public static void graphChecker(){
-	System.out.println("Police: " + Faction.get(0).getFactionValue());
-	System.out.println("Oligarchy: " + Faction.get(1).getFactionValue());
-	System.out.println("People: " + Faction.get(2).getFactionValue());
-	System.out.println("Opposition: " + Faction.get(3).getFactionValue());
-	System.out.println("Army: " + Faction.get(4).getFactionValue());
-	System.out.println("Family: " + Faction.get(5).getFactionValue());
 	
-	if (Faction.get(0).getFactionValue() > 238){
+	age++;
+	if (Faction.get(0).getFactionValue() >= 238){
+		cash = cash + 20;
 		Faction.get(0).setFactionValue(238);
 	}
-	else if (Faction.get(0).getFactionValue() < 0){
+	else if (Faction.get(0).getFactionValue() <= 0){
 		Faction.get(0).setFactionValue(0);
-		factionHatesYou();
+		checker = 2;
+		frameMaker();
+	}
+	else if (Faction.get(0).getFactionValue() >= 200){
+		cash = cash + 20;
 	}
 	else {
 	}
-	if (Faction.get(1).getFactionValue() > 238){
+	if (Faction.get(1).getFactionValue() >= 238){
+		cash = cash + 20;
 		Faction.get(1).setFactionValue(238);
 	}
-	else if (Faction.get(1).getFactionValue() < 0){
+	else if (Faction.get(1).getFactionValue() <= 0){
 		Faction.get(1).setFactionValue(0);
-		factionHatesYou();
+		checker = 2;
+		frameMaker();
+	}
+	else if (Faction.get(1).getFactionValue() >= 200){
+		cash = cash + 20;
 	}
 	else {
 	}
-	if (Faction.get(2).getFactionValue() > 238){
+	if (Faction.get(2).getFactionValue() >= 238){
+		cash = cash + 20;
 		Faction.get(2).setFactionValue(238);
 	}
-	else if (Faction.get(2).getFactionValue() < 0){
+	else if (Faction.get(2).getFactionValue() <= 0){
 		Faction.get(2).setFactionValue(0);
-		factionHatesYou();
+		checker = 2;
+		frameMaker();
+	}
+	else if (Faction.get(2).getFactionValue() >= 200){
+		cash = cash + 20;
 	}
 	else {
 	}
-	if (Faction.get(3).getFactionValue() > 238){
+	if (Faction.get(3).getFactionValue() >= 238){
+		cash = cash + 20;
 		Faction.get(3).setFactionValue(238);
 	}
-	else if (Faction.get(3).getFactionValue() < 0){
+	else if (Faction.get(3).getFactionValue() <= 0){
 		Faction.get(3).setFactionValue(0);
-		factionHatesYou();
+		checker = 2;
+		frameMaker();
+	}
+	else if (Faction.get(3).getFactionValue() >= 200){
+		cash = cash + 20;
 	}
 	else {
 	}
-	if (Faction.get(4).getFactionValue() > 238){
+	if (Faction.get(4).getFactionValue() >= 238){
+		cash = cash + 20;
 		Faction.get(4).setFactionValue(238);
 	}
-	else if (Faction.get(4).getFactionValue() < 0){
+	else if (Faction.get(4).getFactionValue() <= 0){
 		Faction.get(4).setFactionValue(0);
-		factionHatesYou();
+		checker = 2;
+		frameMaker();
+	}
+	else if (Faction.get(4).getFactionValue() >= 200){
+		cash = cash + 20;
 	}
 	else {
 	}
-	if (Faction.get(5).getFactionValue() > 238){
+	if (Faction.get(5).getFactionValue() >= 238){
+		cash = cash + 20;
 		Faction.get(5).setFactionValue(238);
 	}
-	else if (Faction.get(5).getFactionValue() < 0){
+	else if (Faction.get(5).getFactionValue() <= 0){
 		Faction.get(5).setFactionValue(0);
-		factionHatesYou();
+		checker = 2;
+		frameMaker();
+	}
+	else if (Faction.get(5).getFactionValue() >= 200){
+		cash = cash + 20;
 	}
 	else {
 	}
-	
-	if (cash < 0){
-		noMoney();
+	if (cash <= 0){
+		checker = 1;
+		frameMaker();
 	}
-	else{
+	else if (cash >= 200){
+		cash = cash + 20;
+	}
+	int randomChance = (int)(Math.random()*4+1);
+	if (age >= 40 && age < 60){
+		if (randomChance >=4){
+			System.out.println("You died at the ripe old age of " + age);
+			System.exit(0);
+		}
+		else{}
+	}
+	else if (age >= 60 && age < 80){
+		if (randomChance >=3){
+			System.out.println("You died at the ripe old age of " + age);
+			System.exit(0);
+		}
+		else{}
+	}
+	else if (age >= 80 && age < 100){
+		if (randomChance >=2){
+			System.out.println("You died at the ripe old age of " + age);
+			System.exit(0);
+		}
+		else{}
+	}
+	else if (age == 100){
+		System.out.println("You died at the ripe old age of " + age);
+		System.exit(0);
 	}
 	
 	frameMaker();
-}
-
-public static void noMoney(){
-	System.out.println();
-	System.out.println("Your bank vault is empty");
-	System.out.println("You no longer have the funds to bribe the groups");
-	System.exit(0);
-}
-public static void factionHatesYou(){
-	System.out.println();
-	System.out.println("REBELLION!");
-	System.out.println("You have been overthrown in a deadly coup and your lifeless remains now hang outside your palace");
-	System.exit(0);
 }
 
 }
